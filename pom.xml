@@ -34,8 +34,8 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>21</source>
-          <target>21</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
                     <plugin>
@@ -56,7 +56,37 @@
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
+          <reportPlugins>
+            <plugin>
+              <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
 
+            <plugin>
+              <artifactId>maven-jxr-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-pmd-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>findbugs-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>taglist-maven-plugin</artifactId>
+            </plugin>
+          </reportPlugins>
         </configuration>
       </plugin>
     </plugins>
@@ -193,42 +223,5 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-<reporting>
-   <plugins>
 
-          <reportPlugins>
-            <plugin>
-              <artifactId>maven-checkstyle-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-jxr-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-javadoc-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-pmd-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <artifactId>maven-surefire-report-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>findbugs-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>taglist-maven-plugin</artifactId>
-            </plugin>
-          </reportPlugins>
-  </plugins>
- </reporting> 
-         
-         
 </project>
